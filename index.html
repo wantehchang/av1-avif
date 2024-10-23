@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 82ce88815, updated Thu Sep 7 16:33:55 2023 -0700" name="generator">
   <link href="https://AOMediaCodec.github.io/av1-avif" rel="canonical">
-  <meta content="83d518809249f0960c5988f8006c318259565490" name="document-revision">
+  <meta content="e352a2f964fda46fb5d5d57cee7808896f1a4876" name="document-revision">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
     color: var(--a-normal-text);
@@ -2944,7 +2944,7 @@ Quantity (per item):   Zero or one
     This section discusses the box requirements for an <a data-link-type="dfn" href="#avif-file" id="ref-for-avif-file②">AVIF file</a> containing image items. 
    <h4 class="heading settled" data-level="9.1.1" id="avif-required-boxes"><span class="secno">9.1.1. </span><span class="content">Minimum set of boxes</span><a class="self-link" href="#avif-required-boxes"></a></h4>
    <p>As indicated in <a href="#file-constraints">§ 7 General constraints</a>, an <a data-link-type="dfn" href="#avif-file" id="ref-for-avif-file③">AVIF file</a> is a compliant <a data-link-type="biblio" href="#biblio-miaf" title="Information technology -- Multimedia application format (MPEG-A) -- Part 22: Multi-Image Application Format (MiAF)">[MIAF]</a> file. As a consequence, some <a data-link-type="biblio" href="#biblio-isobmff" title="Information technology — Coding of audio-visual objects — Part 12: ISO base media file format">[ISOBMFF]</a> or <a data-link-type="biblio" href="#biblio-heif" title="Information technology — High efficiency coding and media delivery in heterogeneous environments — Part 12: Image File Format">[HEIF]</a> boxes are required, as indicated in the following table. The order of the boxes is indicative in the table. The specifications listed in the "Specification" 
-column may require a specific order for the box or for its children and shall be respected. For example, per <a data-link-type="biblio" href="#biblio-isobmff" title="Information technology — Coding of audio-visual objects — Part 12: ISO base media file format">[ISOBMFF]</a>, the <code><a data-link-type="dfn" href="https://www.iso.org/standard/68960.html" id="ref-for-something②⓪⓪">FileTypeBox</a></code> is required to appear first in an <a data-link-type="dfn" href="#avif-file" id="ref-for-avif-file④">AVIF file</a>.
+column may require a specific order for a box or for its children and the order shall be respected. For example, per <a data-link-type="biblio" href="#biblio-isobmff" title="Information technology — Coding of audio-visual objects — Part 12: ISO base media file format">[ISOBMFF]</a>, the <code><a data-link-type="dfn" href="https://www.iso.org/standard/68960.html" id="ref-for-something②⓪⓪">FileTypeBox</a></code> is required to appear first in an <a data-link-type="dfn" href="#avif-file" id="ref-for-avif-file④">AVIF file</a>.
 The "Version(s)" column in the following table lists the version(s) of the boxes allowed by this brand. <span id="assert-e613e861">With the exception of item properties marked as non-essential, other versions of the boxes shall not be used.</span> "-" means that the box does not have a version.</p>
    <table class="data">
     <thead>
@@ -3071,7 +3071,7 @@ The "Version(s)" column in the following table lists the version(s) of the boxes
       <td>The coded payload may be placed in <code>'<a data-link-type="dfn" href="https://www.iso.org/standard/68960.html" id="ref-for-something②①④">idat</a>'</code> rather than <code>'<a data-link-type="dfn" href="https://www.iso.org/standard/68960.html" id="ref-for-something②①⑤">mdat</a>'</code>, in which case <code>'<a data-link-type="dfn" href="https://www.iso.org/standard/68960.html" id="ref-for-something②①⑥">mdat</a>'</code> is not required.
    </table>
    <h4 class="heading settled" data-level="9.1.2" id="avif-required-boxes-additional"><span class="secno">9.1.2. </span><span class="content">Requirements on additional image item related boxes</span><a class="self-link" href="#avif-required-boxes-additional"></a></h4>
-   <p>The boxes indicated in the following table may be present in an <a data-link-type="dfn" href="#avif-file" id="ref-for-avif-file⑤">AVIF file</a> to provide additional signaling for image items. <span id="assert-cd562e86">If present, the boxes shall use the version indicated in the table unless the box is an item property marked as non-essential.</span> <a data-link-type="dfn" href="#avif" id="ref-for-avif①⓪">AVIF</a> readers are expected to understand the boxes and versions listed in this table. The order of the boxes in the table may not be the order of the boxes in the file. Specifications may require specific order and shall be respected. Additionally, the <code>'<a data-link-type="dfn" href="https://www.iso.org/standard/68960.html" id="ref-for-something②①⑦">free</a>'</code> and <code>'<a data-link-type="dfn" href="https://www.iso.org/standard/68960.html" id="ref-for-something②①⑧">skip</a>'</code> boxes may be present at any level in the hierarchy and <a data-link-type="dfn" href="#avif" id="ref-for-avif①①">AVIF</a> readers are expected to ignore them. Additional boxes in the <code>'<a data-link-type="dfn" href="https://www.iso.org/standard/68960.html" id="ref-for-something②①⑨">meta</a>'</code> hierarchy not listed in the following table may also be present and may be ignored by <a data-link-type="dfn" href="#avif" id="ref-for-avif①②">AVIF</a> readers.</p>
+   <p>The boxes indicated in the following table may be present in an <a data-link-type="dfn" href="#avif-file" id="ref-for-avif-file⑤">AVIF file</a> to provide additional signaling for image items. <span id="assert-cd562e86">If present, the boxes shall use the version indicated in the table unless the box is an item property marked as non-essential.</span> <a data-link-type="dfn" href="#avif" id="ref-for-avif①⓪">AVIF</a> readers are expected to understand the boxes and versions listed in this table. The order of the boxes in the table may not be the order of the boxes in the file. Specifications may require a specific order for a box or for its children and the order shall be respected. Additionally, the <code>'<a data-link-type="dfn" href="https://www.iso.org/standard/68960.html" id="ref-for-something②①⑦">free</a>'</code> and <code>'<a data-link-type="dfn" href="https://www.iso.org/standard/68960.html" id="ref-for-something②①⑧">skip</a>'</code> boxes may be present at any level in the hierarchy and <a data-link-type="dfn" href="#avif" id="ref-for-avif①①">AVIF</a> readers are expected to ignore them. Additional boxes in the <code>'<a data-link-type="dfn" href="https://www.iso.org/standard/68960.html" id="ref-for-something②①⑨">meta</a>'</code> hierarchy not listed in the following table may also be present and may be ignored by <a data-link-type="dfn" href="#avif" id="ref-for-avif①②">AVIF</a> readers.</p>
    <table class="data">
     <thead>
      <tr>
@@ -3218,7 +3218,7 @@ The "Version(s)" column in the following table lists the version(s) of the boxes
       <td><a data-link-type="dfn" href="https://www.iso.org/standard/68960.html" id="ref-for-something②③③">colr</a>
       <td>-
       <td><a data-link-type="biblio" href="#biblio-isobmff" title="Information technology — Coding of audio-visual objects — Part 12: ISO base media file format">[ISOBMFF]</a>
-      <td>Used to signal information such as color primaries
+      <td>Used to signal color information such as color primaries
      <tr>
       <td>
       <td>
@@ -3258,7 +3258,7 @@ The "Version(s)" column in the following table lists the version(s) of the boxes
       <td><a data-link-type="dfn" href="https://www.iso.org/standard/68960.html" id="ref-for-something②③⑦">clli</a>
       <td>-
       <td><a data-link-type="biblio" href="#biblio-isobmff" title="Information technology — Coding of audio-visual objects — Part 12: ISO base media file format">[ISOBMFF]</a>
-      <td>Used to signal HDR light level information for an image
+      <td>Used to signal HDR content light level information for an image
      <tr>
       <td>
       <td>
@@ -3266,7 +3266,7 @@ The "Version(s)" column in the following table lists the version(s) of the boxes
       <td><a data-link-type="dfn" href="https://www.iso.org/standard/68960.html" id="ref-for-something②③⑧">cclv</a>
       <td>-
       <td><a data-link-type="biblio" href="#biblio-isobmff" title="Information technology — Coding of audio-visual objects — Part 12: ISO base media file format">[ISOBMFF]</a>
-      <td>Used to signal HDR color volume for an image
+      <td>Used to signal HDR content color volume for an image
      <tr>
       <td>
       <td>
@@ -3274,7 +3274,7 @@ The "Version(s)" column in the following table lists the version(s) of the boxes
       <td><a data-link-type="dfn" href="https://www.iso.org/standard/68960.html" id="ref-for-something②③⑨">mdcv</a>
       <td>-
       <td><a data-link-type="biblio" href="#biblio-isobmff" title="Information technology — Coding of audio-visual objects — Part 12: ISO base media file format">[ISOBMFF]</a>
-      <td>Used to signal HDR mastering information for an image
+      <td>Used to signal HDR mastering display color volume for an image
      <tr>
       <td>
       <td>
@@ -3438,7 +3438,7 @@ The "Version(s)" column in the following table lists the version(s) of the boxes
        </ul>
      </ul>
    </ul>
-   <p>This is equivalent to the following postfix notation (parentheses for clarity):</p>
+   <p>This is equivalent to the following postfix notation (parentheses added for clarity):</p>
    <math>
     <msub>
      <mi>sample</mi>
@@ -3480,10 +3480,10 @@ The "Version(s)" column in the following table lists the version(s) of the boxes
      <mn>2</mn>
     </msub>
    </math>
-   <p>Each output sample is equal to the sum of a sample of the first input image item shifted to the left by 8 and of a sample of the second input image item. This can be viewed as a bit depth extension of the first input image item by the second input image item. The first input image item contains the 8 most significant bits and the second input image item contains the 8 least significant bits of the output reconstructed image item which has a bit depth of 16, something that is impossible to achieve with a single <a data-link-type="dfn" href="#av1-image-item" id="ref-for-av1-image-item②⑥">AV1 image item</a>.</p>
+   <p>Each output sample is equal to the sum of a sample of the first input image item shifted to the left by 8 bits and of a sample of the second input image item. This can be viewed as a bit depth extension of the first input image item by the second input image item. The first input image item contains the 8 most significant bits and the second input image item contains the 8 least significant bits of the 16-bit output reconstructed image item. It is impossible to achieve a bit depth of 16 with a single <a data-link-type="dfn" href="#av1-image-item" id="ref-for-av1-image-item②⑥">AV1 image item</a>.</p>
    <p class="note" role="note"><span class="marker">NOTE:</span> If the first input image item is the <a data-link-type="dfn" href="https://www.iso.org/standard/74417.html" id="ref-for-something②⑤⑤">primary image item</a> and is enclosed in an <code>'<a data-link-type="dfn" href="https://www.iso.org/standard/68960.html" id="ref-for-something②⑤⑥">altr</a>'</code> group (see <a href="#altr-group">§ 5.1 'altr' group</a>) with the <a data-link-type="dfn" href="#sample-transform-derived-image-item" id="ref-for-sample-transform-derived-image-item①⑥">Sample Transform Derived Image Item</a>, the first input image item is also a backward-compatible 8-bit regular coded image item that can be used by readers that do not support <a data-link-type="dfn" href="#sample-transform-derived-image-item" id="ref-for-sample-transform-derived-image-item①⑦">Sample Transform Derived Image Items</a> or do not need extra precision.</p>
    <p class="note" role="note"><span class="marker">NOTE:</span> The second input image item can be marked as <a data-link-type="dfn" href="https://www.iso.org/standard/66067.html" id="ref-for-something②⑤⑦">hidden</a> to prevent readers from surfacing it to users.</p>
-   <p class="note" role="note"><span class="marker">NOTE:</span> The second input image item loses its meaning of least significant part if any of the most significant bits changes, so the first input image item has to be losslessly encoded. The second input image item supports reasonable loss during encoding.</p>
+   <p class="note" role="note"><span class="marker">NOTE:</span> The second input image item loses its meaning of the least significant part if any of the most significant bits changes, so the first input image item has to be losslessly encoded. The second input image item supports reasonable loss during encoding.</p>
    <p class="note" role="note"><span class="marker">NOTE:</span> This pattern can be used for reconstructed bit depths beyond 16 by combining more than two input image items or with various input bit depth configurations and operations.</p>
    <h4 class="heading settled" id="sato-example-residual-bit-depth-extension"><span class="content">Residual bit depth extension</span><a class="self-link" href="#sato-example-residual-bit-depth-extension"></a></h4>
    <p>The following example describes how to leverage a <a data-link-type="dfn" href="#sample-transform-derived-image-item" id="ref-for-sample-transform-derived-image-item①⑧">Sample Transform Derived Image Item</a> on top of a regular 12-bit <a data-link-type="dfn" href="https://www.iso.org/standard/74417.html" id="ref-for-something②⑤⑧">MIAF image item</a> to extend the decoded bit depth to 16 bits.<br> It differs from the <a href="#sato-example-suffix-bit-depth-extension">Suffix bit depth extension</a> by its slightly longer series of operations allowing its first input image item to be lossily encoded.</p>
@@ -3656,7 +3656,7 @@ The "Version(s)" column in the following table lists the version(s) of the boxes
        </ul>
      </ul>
    </ul>
-   <p>This is equivalent to the following postfix notation (parentheses for clarity):</p>
+   <p>This is equivalent to the following postfix notation (parentheses added for clarity):</p>
    <math>
     <msub>
      <mi>sample</mi>
@@ -3705,7 +3705,7 @@ The "Version(s)" column in the following table lists the version(s) of the boxes
     <mo>-</mo>
     <mn>128</mn>
    </math>
-   <p>Each output sample is equal to the sum of a sample of the first input image item shifted to the left by 4 and of a sample of the second input image item offset by -128. This can be viewed as a bit depth extension of the first input image item by the second input image item which contains the residuals to correct the precision loss of the first input image item.</p>
+   <p>Each output sample is equal to the sum of a sample of the first input image item shifted to the left by 4 bits and of a sample of the second input image item offset by -128. This can be viewed as a bit depth extension of the first input image item by the second input image item, which contains the residuals to correct the precision loss of the first input image item.</p>
    <p class="note" role="note"><span class="marker">NOTE:</span> If the first input image item is the <a data-link-type="dfn" href="https://www.iso.org/standard/74417.html" id="ref-for-something②⑥⑧">primary image item</a> and is enclosed in an <code>'<a data-link-type="dfn" href="https://www.iso.org/standard/68960.html" id="ref-for-something②⑥⑨">altr</a>'</code> group (see <a href="#altr-group">§ 5.1 'altr' group</a>) with the derived image item, the first input image item is also a backward-compatible 12-bit regular coded image item that can be used by decoding contexts that do not support <a data-link-type="dfn" href="#sample-transform-derived-image-item" id="ref-for-sample-transform-derived-image-item②⓪">Sample Transform Derived Image Items</a> or do not need extra precision.</p>
    <p class="note" role="note"><span class="marker">NOTE:</span> The second input image item can be marked as <a data-link-type="dfn" href="https://www.iso.org/standard/66067.html" id="ref-for-something②⑦⓪">hidden</a> to prevent readers from surfacing it to users.</p>
    <p class="note" role="note"><span class="marker">NOTE:</span> The first input image item supports reasonable loss during encoding because the second input image item "overlaps" by 4 bits to correct the loss. The second input image item supports reasonable loss during encoding.</p>
